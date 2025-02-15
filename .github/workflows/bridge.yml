@@ -28,6 +28,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+          
+      - name: Debugging information before running flutter_rust_bridge_codegen
+        run: |
+          ls -la ./libs/
+          ls -la ./libs/hbb_common/
 
       - name: Install prerequisites
         run: |
