@@ -1492,6 +1492,9 @@ jobs:
           name: bridge-artifact
           path: ./
 
+      - name: Set file permissions
+        run: chmod +x ./build.py
+        
       - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build rustdesk
         id: vcpkg
