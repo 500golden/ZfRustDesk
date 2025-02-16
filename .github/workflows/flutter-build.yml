@@ -417,6 +417,9 @@ jobs:
           name: bridge-artifact
           path: ./
 
+      - name: Set file permissions
+        run: chmod +x ./build.py
+
       - name: Build rustdesk
         run: |
           ./build.py --flutter --hwcodec
@@ -791,6 +794,9 @@ jobs:
           cargo -V
           rustc -V
 
+      - name: Set file permissions
+        run: chmod +x ./build.py  
+               
       - name: Build rustdesk
         run: |
           if [ "${{ matrix.job.target }}" = "aarch64-apple-darwin" ]; then
