@@ -998,6 +998,9 @@ jobs:
           vcpkgGitCommitId: ${{ env.VCPKG_COMMIT_ID }}
           doNotCache: false
 
+      - name: Set file permissions
+        run: chmod +x ./flutter/build_android_deps.sh
+
       - name: Install vcpkg dependencies
         run: |
           case ${{ matrix.job.target }} in
@@ -1042,6 +1045,9 @@ jobs:
         with:
           prefix-key: rustdesk-lib-cache-android # TODO: drop '-android' part after caches are invalidated
           key: ${{ matrix.job.target }}
+
+      - name: Set file permissions
+        run: chmod +x ./flutter/*.sh
 
       - name: Build rustdesk lib
         env:
