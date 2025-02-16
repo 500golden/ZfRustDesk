@@ -697,6 +697,9 @@ jobs:
           security default-keychain -s rustdesk.keychain
           security find-identity -v
 
+      - name: Set file permissions
+        run: chmod +x ./build.py 
+         
       - name: Import notarize key
         if: env.MACOS_P12_BASE64 != null
         uses: timheuer/base64-to-file@v1.2
@@ -796,7 +799,7 @@ jobs:
 
       - name: Set file permissions
         run: chmod +x ./build.py  
-               
+
       - name: Build rustdesk
         run: |
           if [ "${{ matrix.job.target }}" = "aarch64-apple-darwin" ]; then
