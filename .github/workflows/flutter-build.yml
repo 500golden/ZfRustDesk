@@ -1497,7 +1497,7 @@ jobs:
           path: ./
 
       - name: Set file permissions
-        run: chmod +x ./build.py
+        run: chmod 0655 ./build.py
 
       - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build rustdesk
