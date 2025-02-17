@@ -1056,7 +1056,11 @@ jobs:
           key: ${{ matrix.job.target }}
 
       - name: Set file permissions
-        run: chmod +x ./flutter/*.sh
+        run: |
+          chmod +x ./flutter/ndk_arm64.sh
+          chmod +x ./flutter/ndk_arm.sh
+          chmod +x ./flutter/ndk_x64.sh
+          chmod +x ./flutter/ndk_x86.sh
 
       - name: Build rustdesk lib
         env:
