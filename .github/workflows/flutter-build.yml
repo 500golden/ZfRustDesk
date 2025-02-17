@@ -1494,7 +1494,7 @@ jobs:
 
       - name: Set file permissions
         run: chmod +x ./build.py
-        
+
       - uses: rustdesk-org/run-on-arch-action@amd64-support
         name: Build rustdesk
         id: vcpkg
@@ -1748,6 +1748,9 @@ jobs:
             core.exportVariable('ACTIONS_CACHE_URL', process.env.ACTIONS_CACHE_URL || '');
             core.exportVariable('ACTIONS_RUNTIME_TOKEN', process.env.ACTIONS_RUNTIME_TOKEN || '');
 
+      - name: Set file permissions
+        run: chmod +x ./build.py
+        
       - name: Checkout source code
         uses: actions/checkout@v4
         with:
