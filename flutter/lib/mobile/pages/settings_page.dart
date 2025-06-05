@@ -156,8 +156,15 @@ class _SettingsState extends State<SettingsPage> with WidgetsBindingObserver {
         _enableStartOnBoot = enableStartOnBoot;
       }
 
+/*
       var checkUpdateOnStartup =
           mainGetLocalBoolOptionSync(kOptionEnableCheckUpdate);
+      if (checkUpdateOnStartup != _checkUpdateOnStartup) {
+        update = true;
+        _checkUpdateOnStartup = checkUpdateOnStartup;
+      }
+*/
+      var checkUpdateOnStartup = false; // 强制设为 false，默认不勾选
       if (checkUpdateOnStartup != _checkUpdateOnStartup) {
         update = true;
         _checkUpdateOnStartup = checkUpdateOnStartup;
