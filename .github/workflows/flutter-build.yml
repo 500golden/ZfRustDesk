@@ -958,7 +958,8 @@ jobs:
                libayatana-appindicator3-dev \
                libasound2-dev \
                libc6-dev \
-               libclang-10-dev \
+               libclang-11-dev \
+               libunwind-dev \
                libgstreamer1.0-dev \
                libgstreamer-plugins-base1.0-dev \
                libgtk-3-dev \
@@ -1237,7 +1238,8 @@ jobs:
                libayatana-appindicator3-dev \
                libasound2-dev \
                libc6-dev \
-               libclang-10-dev \
+               libclang-11-dev \
+               libunwind-dev \
                libgstreamer1.0-dev \
                libgstreamer-plugins-base1.0-dev \
                libgtk-3-dev \
@@ -1527,7 +1529,8 @@ jobs:
                g++ \
                libayatana-appindicator3-dev \
                libasound2-dev \
-               libclang-10-dev \
+               libclang-11-dev \
+               libunwind-dev \
                libgstreamer1.0-dev \
                libgstreamer-plugins-base1.0-dev \
                libgtk-3-dev \
